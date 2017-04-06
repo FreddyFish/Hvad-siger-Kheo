@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div>
+<h1>
+Hvad siger Kheo's kød?
+</h1>
+   <center> <img class="image" src="img/ja.png" />
+     	<img class="image" src="img/nej.png" />  </center>
+</div>
+<script>
+function loadJS(src, callback) {
+    var s = document.createElement('script');
+    s.src = src;
+    s.async = true;
+    s.onreadystatechange = s.onload = function() {
+        var state = s.readyState;
+        if (!callback.done && (!state || /loaded|complete/.test(state))) {
+            callback.done = true;
+            callback();
+        }
+    };
+    document.getElementsByTagName('head')[0].appendChild(s);
+}
+loadJS('js/script.js', function() { 
+    // put your code here to run after script is loaded
+});
+</script>
+<h2>
+<div id="quote"></div>
+</h2>
+</body>
+</html>
